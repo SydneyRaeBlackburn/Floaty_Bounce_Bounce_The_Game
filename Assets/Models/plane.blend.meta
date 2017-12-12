@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 109dac8340a32d2448ec5fd5aed023ca
-timeCreated: 1513038841
+guid: 392f08797dfa84ecbbd667aae88e98f9
+timeCreated: 1513039456
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,15 +9,30 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Cube_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: c87818594b64b50429b98c45abdc7e5b, type: 2}
+      name: Material_001
+    second: {fileID: 2100000, guid: 52abf674195828849a9618e74725c194, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_002
+    second: {fileID: 2100000, guid: 722a4a6136651184badfcd9e5742649b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_003
+    second: {fileID: 2100000, guid: bc691bfea35f66e44af6ab3c605cf42a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_004
+    second: {fileID: 2100000, guid: b8c07ef28711f4f979450813d00e057e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
