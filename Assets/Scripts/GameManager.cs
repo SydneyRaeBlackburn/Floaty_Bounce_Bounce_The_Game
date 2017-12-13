@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour {
 
 	public float score = 0.0f;
 	public float playerSpeed = 0.0f;
-	public boolean isDead = false;
+	public bool isDead = false;
 
 	public static GameManager Instance {
 		get { return _instance; }
