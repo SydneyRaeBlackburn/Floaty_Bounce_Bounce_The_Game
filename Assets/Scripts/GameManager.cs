@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
 	private static GameManager _instance;
 
 	public float score = 0.0f;
-	public float playerSpeed = 0.0f;
+	public float playerSpeed = 15.0f;
 	public bool isDead = false;
 
 	public static GameManager Instance {

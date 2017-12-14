@@ -22,6 +22,12 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        moveVector = Vector3.zero;
+
+        moveVector.x = Input.GetAxisRaw("Horizontal") * gm.playerSpeed;
+        moveVector.y = Input.GetAxisRaw("Vertical") * gm.playerSpeed;
+        moveVector.z = gm.playerSpeed;
+
+        controller.Move(moveVector * Time.deltaTime);
 	}
 }
