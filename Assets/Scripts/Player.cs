@@ -18,7 +18,6 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
-        sounds = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
