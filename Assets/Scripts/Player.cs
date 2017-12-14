@@ -37,12 +37,9 @@ public class Player : MonoBehaviour {
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.point.z > transform.position.z + controller.radius ||
-            hit.point.x > transform.position.x + controller.radius ||
-            hit.point.y > transform.position.y + controller.radius)
+        if (hit.point.z > transform.position.z + controller.radius)
         {
             Death();
-            //sounds.PlayOneShot(crash);
         }
     }
 
