@@ -30,4 +30,19 @@ public class Player : MonoBehaviour {
 
         controller.Move(moveVector * Time.deltaTime);
 	}
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.point.z > transform.position.z + controller.radius)
+        {
+            Death();
+            //sounds.PlayOneShot(crash);
+        }
+    }
+
+    private void Death()
+    {
+        Debug.Log("Deadddd");
+        gm.isDead = true;
+    }
 }

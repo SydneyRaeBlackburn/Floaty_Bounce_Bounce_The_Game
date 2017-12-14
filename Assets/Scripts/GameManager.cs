@@ -25,4 +25,25 @@ public class GameManager : MonoBehaviour {
 			DontDestroyOnLoad(this.gameObject);
 		}
 	}
+
+    //Set Player Speed at Level Up
+    public void AddSpeed(int modifier)
+    {
+        playerSpeed += 5.0f * modifier;
+    }
+
+    public void ResetScore()
+    {
+        score = 0.0f;
+    }
+
+    public void ResetDeath()
+    {
+        isDead = false;
+    }
+
+    public void ResetSpeed()
+    {
+        playerSpeed = 15.0f;
+    }
 }
