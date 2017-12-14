@@ -10,6 +10,8 @@ public class DeathMenu : MonoBehaviour
     public GameManager gm;
 
     public Text score;
+    public Text playButton;
+    public Text lives;
 
     private void Awake()
     {
@@ -27,6 +29,11 @@ public class DeathMenu : MonoBehaviour
     void Update()
     {
         score.text = ((int)gm.score).ToString();
+        lives.text = "Lives: " + ((int)gm.lives).ToString();
+        if (gm.lives <= 0)
+            playButton.text = "Play Again";
+        else
+            playButton.text = "Continue?";
     }
 
     public void ToggleDeathMenu()

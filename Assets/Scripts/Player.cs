@@ -10,6 +10,9 @@ public class Player : MonoBehaviour {
 	private CharacterController controller;
 	private Vector3 moveVector;
 
+    public AudioClip crash;
+    AudioSource sounds;
+
 	private void Awake() {
 		go = GameObject.FindGameObjectWithTag("GameController");
         gm = go.GetComponent<GameManager>();
@@ -18,6 +21,7 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController>();
+        sounds = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -40,6 +44,7 @@ public class Player : MonoBehaviour {
         if (hit.point.z > transform.position.z + controller.radius)
         {
             Death();
+            sounds.PlayOneShot(crash);
         }
     }
 
@@ -47,5 +52,6 @@ public class Player : MonoBehaviour {
     {
         Debug.Log("Deadddd");
         gm.isDead = true;
+        gm.lives--;
     }
 }

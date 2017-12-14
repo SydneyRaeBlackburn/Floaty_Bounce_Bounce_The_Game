@@ -14,6 +14,7 @@ public class Scoring : MonoBehaviour
     private int scoreToNextLevel = 10;
 
     public Text score;
+    public Text lives;
     public DeathMenu deathMenu;
 
     private void Awake()
@@ -25,7 +26,12 @@ public class Scoring : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        gm.ResetScore();
+        if(gm.lives == (int)0)
+        {
+            gm.ResetScore();
+            gm.ResetLives();
+        }
+            
         gm.ResetSpeed();
         gm.ResetDeath();
     }
@@ -45,6 +51,7 @@ public class Scoring : MonoBehaviour
 
         gm.score += Time.deltaTime * difficulty;
         score.text = ((int)gm.score).ToString();
+        lives.text = "Lives: " + ((int)gm.lives).ToString();
     }
 
     void LevelUp()

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public float score = 0.0f;
 	public float playerSpeed = 15.0f;
 	public bool isDead = false;
+    public float lives = 3.0f;
 
 	public static GameManager Instance {
 		get { return _instance; }
@@ -45,5 +46,10 @@ public class GameManager : MonoBehaviour {
     public void ResetSpeed()
     {
         playerSpeed = 15.0f;
+    }
+
+    public void ResetLives()
+    {
+        lives = 3.0f;
     }
 }
