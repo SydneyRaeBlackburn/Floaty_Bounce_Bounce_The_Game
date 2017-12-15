@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
     public AudioClip crash;
     AudioSource sounds;
 
+
+
 	private void Awake() {
 		go = GameObject.FindGameObjectWithTag("GameController");
         gm = go.GetComponent<GameManager>();
@@ -22,7 +24,7 @@ public class Player : MonoBehaviour {
 	void Start () {
 		controller = GetComponent<CharacterController>();
         sounds = GetComponent<AudioSource>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
